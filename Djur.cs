@@ -124,6 +124,44 @@ namespace Labb_2___Arv
             Console.WriteLine($"{_name} can use its incredibly loud howl to gather its pack.");
         }
     }
+    public class Fox : Dog
+    {
+        public string _sneak;
+        public Fox (int age, string name, string colour, string fur, string pet, string fangs, string sneak) : base (age, name, colour, fur, pet, fangs)
+        {
+            _sneak = sneak;     
+        }
+        public override void makeSound()
+        {
+            Console.WriteLine($"{_name} is foxing. TITITIDIDITITIDITI DIDIDIDI");
+            Console.WriteLine();
+        }
+
+        public override void DjurInfo()
+        {
+
+            Console.WriteLine($"This is the fox called {_name}.");
+            AnimalInfo();
+            Console.WriteLine($"{_name} has a pair of small but {_fangs}.");
+            Console.WriteLine();
+        }
+
+        public override void Eat()
+        {
+            Console.WriteLine($"{_name} eats a chicken it just caught. NOM NOM.");
+            Console.WriteLine();
+        }
+
+        public override void ChewToy()
+        {
+            Console.WriteLine($"{_name} hid his chewingtoy and no one ever found it.");
+            Console.WriteLine();
+        }
+        public void CatchChicken()
+        {
+            Console.WriteLine($"{_name} who is {_sneak} is an expert when it comes to catch innocent chickens.");
+        }
+    }
     public class Cat : Animal
     {
         public string _climb;
@@ -190,7 +228,7 @@ namespace Labb_2___Arv
 
         public void Paralyse()
         {
-            Console.WriteLine($"{_name} can paralyse prey with its {_venomous} bite");
+            Console.WriteLine($"{_name} can paralyse prey with its {_venomous} bite.");
             Console.WriteLine();
         }
     }

@@ -18,7 +18,8 @@ namespace Labb_2___Arv
                 "\n[2]Cat" +
                 "\n[3]Snake" +
                 "\n[4]Wolf" +
-                "\n[5]Exit program");
+                "\n[5]Fox" +
+                "\n[6]Exit program");
                 string choice = Console.ReadLine();
                 Console.Clear();
                 switch (choice)
@@ -36,6 +37,9 @@ namespace Labb_2___Arv
                         Wolf();
                         break;
                     case "5":
+                        Fox();
+                        break;
+                    case "6":
                         go = false;
                         break;
                     default:
@@ -88,7 +92,19 @@ namespace Labb_2___Arv
                 wolf.Pack();
                 Console.ReadKey();
                 Console.Clear();
-            }                    
+            }
+            static void Fox()
+            {
+                Fox fox = new Fox(4, "Ylvis", "Orange", "Has a lot of fur", "is a wild animal, NOT a pet", "sharp fangs", "is very sneaky");
+                fox.DjurInfo();
+                fox.makeSound();
+                fox.Eat();
+                fox.ChewToy();
+                fox.CatchChicken();
+                Console.ReadKey();
+                Console.Clear();
+            }
+
         }      
     }
 }
