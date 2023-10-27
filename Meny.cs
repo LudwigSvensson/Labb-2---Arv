@@ -8,8 +8,8 @@ namespace Labb_2___Arv
 {
     public class Meny
     {
-    public void Menu()
-    {            
+        public void Menu()
+        {            
             bool go = true;
             while (go)
             {
@@ -43,6 +43,7 @@ namespace Labb_2___Arv
                         break;
                 }
             }
+
             static void Cat()
             {
                 Cat cat = new Cat(8, "Mårten", "white", "is furry", "is a suitable pet", "is an excellent climber");
@@ -53,6 +54,7 @@ namespace Labb_2___Arv
                 Console.ReadKey();
                 Console.Clear();
             }
+
             static void Dog()
             {
                 Dog dog = new Dog(5, "Henry", "black", "Has a lot of fur", "is an excellent pet", "sharp fangs");
@@ -64,6 +66,7 @@ namespace Labb_2___Arv
                 Console.Clear();
 
             }
+
             static void Snake()
             {
                 Snake snake = new Snake(21, "Lena", "Green", "does not have fur, she has scales", "is not a great pet", "is very venomous");
@@ -74,6 +77,7 @@ namespace Labb_2___Arv
                 Console.ReadKey();
                 Console.Clear();
             }
+
             static void Wolf()
             {
                 Wolf wolf = new Wolf(14, "Matilda", "grey", "Has a lot of fur", "is a wild animal, NOT a pet", "sharp fangs", "is an excellent hunter");
@@ -84,8 +88,8 @@ namespace Labb_2___Arv
                 wolf.Pack();
                 Console.ReadKey();
                 Console.Clear();
-            }            
-        }   
+            }                    
+        }      
     }
 }
 
