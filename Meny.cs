@@ -76,11 +76,12 @@ namespace Labb_2___Arv
             }
             static void Wolf()
             {
-                Wolf wolf = new Wolf(14, "Matilda", "grey", "Has a lot of fur", "is a wild animal, NOT a pet", "sharp fangs", "is a excellent hunter");
+                Wolf wolf = new Wolf(14, "Matilda", "grey", "Has a lot of fur", "is a wild animal, NOT a pet", "sharp fangs", "is an excellent hunter");
                 wolf.DjurInfo();
                 wolf.makeSound();
                 wolf.Eat();
                 wolf.ChewToy();
+                wolf.Pack();
                 Console.ReadKey();
                 Console.Clear();
             }            

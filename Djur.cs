@@ -22,18 +22,25 @@ namespace Labb_2___Arv
         {
             Console.WriteLine($"{_name} is making the sound if its people");
         }
-        public virtual void DjurInfo()
+
+        protected virtual void AnimalInfo()
         {
             Console.WriteLine($"{_name} {_fur}." +
                 $"\nThe colour of {_name} is {_colour}." +
                 $"\n{_name} {_pet}." +
                 $"\n{_name} is {_age} years old.");
         }
+        public virtual void DjurInfo()
+        {
+            AnimalInfo();
+        }
+
         public virtual void Eat()
         {
             Console.WriteLine($"{_name} is snacking");
             Console.WriteLine();
         }
+
         public Animal (int age, string name, string colour, string fur, string pet)
         {
             _age = age;            
@@ -58,8 +65,9 @@ namespace Labb_2___Arv
         }
         public override void DjurInfo()
         {
+
             Console.WriteLine($"This is the dog called {_name}.");
-            base.DjurInfo();
+            AnimalInfo();
             Console.WriteLine($"{_name} has a pair of {_fangs}");
             Console.WriteLine();
         }
@@ -68,7 +76,7 @@ namespace Labb_2___Arv
             Console.WriteLine($"{_name} is eating his masters shoe. NO NO");
             Console.WriteLine();
         }
-        public void ChewToy ()
+        public virtual void ChewToy ()
         {
             Console.WriteLine($"{_name} destroys his chewingtoy with its pair of {_fangs}");
             Console.WriteLine();
@@ -89,18 +97,18 @@ namespace Labb_2___Arv
         public override void DjurInfo()
         {
             Console.WriteLine($"This is the wolf called {_name}.");
-            base.DjurInfo();
+            AnimalInfo();
             Console.WriteLine($"{_name} has a pair of really {_fangs}");
-            Console.WriteLine();
+            Console.WriteLine($"{_name} {_hunter}");
         }
         public override void Eat()
         {
             Console.WriteLine($"{_name} is eating a newly chatched deer. NOM NOM.");
             Console.WriteLine();
         }
-        public void ChewToy()
+        public override void ChewToy()
         {
-            Console.WriteLine($"{_name} completely destroys his chewingtoy with its pair of {_fangs}.");
+            Console.WriteLine($"{_name} completely destroys her chewingtoy with its pair of {_fangs}.");
             Console.WriteLine();
         }
         public void Pack ()
@@ -135,7 +143,7 @@ namespace Labb_2___Arv
         }
         public void ClimbTree()
         {
-            Console.WriteLine($" Since {_name} {_climb}, climbing the tree is childs play for him.");
+            Console.WriteLine($"Since {_name} {_climb}, climbing the tree is childs play for him.");
             Console.WriteLine();
         }
 
